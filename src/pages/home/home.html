@@ -6,28 +6,10 @@
 
 <ion-content padding class="card-background-page">
 
-  <ion-card>
-    <img src="https://pbs.twimg.com/media/DdQHYxEX0AANk3S.jpg" />
-    <div class="card-title">States Trending</div>
-    <div class="card-subtitle">41 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://maeveharder.files.wordpress.com/2012/06/dsc_0264.jpg" />
-    <div class="card-title">Indian Trending</div>
-    <div class="card-subtitle">64 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://assets.porttechnology.org/images/made/images/uploads/wygwam/Containers_on_ship_592_396_84.jpg" />
-    <div class="card-title">Arabs Trending</div>
-    <div class="card-subtitle">72 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-madison.png" />
-    <div class="card-title">Madison</div>
-    <div class="card-subtitle">28 Listings</div>
+  <ion-card *ngFor="let source of initialList; let i=index" (click)="itemTapped($event, source, i)">
+    <img [src]="source.imgSrc" />
+    <div class="card-title">{{source.country}}</div>
+    <div class="card-subtitle">{{source.newsList}} Hot News</div>
   </ion-card>
 
 </ion-content>

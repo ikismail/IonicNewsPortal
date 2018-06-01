@@ -22,3 +22,10 @@ export class NewsSource {
   language: String;
   country: String;
 }
+
+export class Country {
+  id: string;
+  imgSrc: string;
+  country: string;
+  newsList: number;
+}

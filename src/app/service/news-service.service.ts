@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
-import { Obeservable } from "rxjs";
 @Injectable()
 export class NewsServiceService {
   private API_KEY = "10ad575c68f24879949f89147d38c9ce";
@@ -12,7 +11,7 @@ export class NewsServiceService {
     this.HEADER = this.HEADER.append("Authorization", "Bearer " + this.API_KEY);
   }
 
-  get20TrendingNewsByCountry(country: string): Obeservable<any> {
+  get20TrendingNewsByCountry(country: string) {
     let params = new HttpParams();
     params = params.set("country", country);
     console.log("params", params);
