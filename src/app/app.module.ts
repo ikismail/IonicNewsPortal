@@ -1,3 +1,4 @@
+import { CategoriesPage } from "./../pages/categories/categories";
 import { SourcePage } from "./../pages/source-page/source";
 import { NewsServiceService } from "./service/news-service.service";
 import { NgModule, ErrorHandler } from "@angular/core";
@@ -15,7 +16,15 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 
 @NgModule({
-  declarations: [MyApp, AboutPage, ContactPage, HomePage, TabsPage, SourcePage],
+  declarations: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+    SourcePage,
+    CategoriesPage
+  ],
   imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -24,7 +33,8 @@ import { SplashScreen } from "@ionic-native/splash-screen";
     ContactPage,
     HomePage,
     TabsPage,
-    SourcePage
+    SourcePage,
+    CategoriesPage
   ],
   providers: [
     StatusBar,
