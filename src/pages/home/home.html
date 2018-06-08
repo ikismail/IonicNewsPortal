@@ -6,7 +6,7 @@
 
 <ion-content padding class="card-background-page">
 
-  <ion-card *ngFor="let source of initialList; let i=index" (click)="itemTapped($event, source, i)">
+  <ion-card *ngFor="let source of initialList; let i=index" (click)="itemTapped(source, i)">
     <img [src]="source.imgSrc" />
     <div class="card-title">{{source.country}}</div>
     <div class="card-subtitle">{{source.newsList}} Hot News</div>

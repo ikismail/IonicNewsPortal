@@ -4,12 +4,16 @@ page-category {
       position: relative;
     }
 
+    ion-row .col {
+      padding: 0;
+    }
+
     .card-title {
       position: absolute;
-      top: 45%;
-      left: 25%;
+      top: 70%;
+      left: 4%;
       font-size: 1.5em;
-      width: 100%;
+      width: 90%;
       font-weight: bold;
       color: #fff;
     }
