@@ -8,12 +8,24 @@ export class NewsServiceService {
   HEADER = new HttpHeaders();
 
   constructor(private http: HttpClient) {
-    this.HEADER = this.HEADER.append("Authorization", "Bearer " + this.API_KEY);
+    this.HEADER = this.HEADER.append("Authorization", "Bearer " + this.API_KEY)
   }
 
   get20TrendingNewsByCountry(country: string) {
     let params = new HttpParams();
     params = params.set("country", country);
+    return this.http.get(this.HEADLINE_API, {
+      params: params,
+      headers: this.HEADER
+    });
+  }
+
+  getNewsByQuery(query: string, page: any) {
+    let params = new HttpParams();
+    params = params
+      .set("page", page)
+      .set("country", "in")
+      .set("category", query);
     console.log("params", params);
     return this.http.get(this.HEADLINE_API, {
       params: params,

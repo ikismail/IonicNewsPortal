@@ -9,11 +9,11 @@ import { CatNewsPage } from "../category-news-page/cat-news-page";
 export class CategoriesPage {
   constructor(public navCtrl: NavController) {}
 
-  itemTapped(item, index) {
+  itemTapped(query) {
+    console.log("item tapped", query);
+
     this.navCtrl.push(CatNewsPage, {
-      countryCode: item.id,
-      country: item.country,
-      index: index
+      query: query
     });
   }
 }

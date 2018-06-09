@@ -10,55 +10,37 @@
     <ion-grid>
         <ion-row>
             <ion-col col-12>
-                <ion-card>
+                <ion-card (click)="itemTapped('general')">
                     <img src="https://image.ibb.co/bsXr2y/world.jpg" width="100%" height="150px" />
                     <div class="card-title">World</div>
                 </ion-card>
             </ion-col>
             <ion-col col-6>
-                <ion-card>
+                <ion-card (click)="itemTapped('business')">
                     <img src="https://image.ibb.co/cfH8hy/business.jpg" />
                     <div class="card-title">Business</div>
                 </ion-card>
             </ion-col>
             <ion-col col-6>
-                <ion-card>
+                <ion-card (click)="itemTapped('entertainment')">
                     <img src="https://image.ibb.co/djLiFJ/entertainment.jpg" />
                     <div class="card-title">Entertainment</div>
                 </ion-card>
             </ion-col>
             <ion-col col-12>
-                <ion-card>
-                    <img src="https://image.ibb.co/cr5HaJ/music.jpg" width="100%" height="150px" />
-                    <div class="card-title">Music</div>
+                <ion-card (click)="itemTapped('health')">
+                    <img src="https://image.ibb.co/jsvRQJ/health.jpg" width="100%" height="150px" />
+                    <div class="card-title">Health</div>
                 </ion-card>
             </ion-col>
             <ion-col col-6>
-                <ion-card>
-                    <img src="https://image.ibb.co/eXauNy/gaming.jpg" />
-                    <div class="card-title">Gaming</div>
-                </ion-card>
-            </ion-col>
-            <ion-col col-6>
-                <ion-card>
-                    <img src="https://image.ibb.co/ndHkUd/politics.jpg" />
-                    <div class="card-title">Politics</div>
-                </ion-card>
-            </ion-col>
-            <ion-col col-12>
-                <ion-card>
-                    <img src="https://image.ibb.co/iJR12y/science.jpg" width="100%" height="150px" />
-                    <div class="card-title">Science</div>
-                </ion-card>
-            </ion-col>
-            <ion-col col-6>
-                <ion-card>
+                <ion-card (click)="itemTapped('sports')">
                     <img src="https://image.ibb.co/kVOg2y/sports.jpg" />
                     <div class="card-title">Sports</div>
                 </ion-card>
             </ion-col>
             <ion-col col-6>
-                <ion-card>
+                <ion-card (click)="itemTapped('technology')">
                     <img src="https://image.ibb.co/hY0dhy/technology.jpg" />
                     <div class="card-title">Technology</div>
                 </ion-card>
