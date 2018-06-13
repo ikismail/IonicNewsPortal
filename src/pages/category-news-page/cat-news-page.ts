@@ -9,6 +9,9 @@ import { NewsServiceService } from "./../../app/service/news-service.service";
 export class CatNewsPage implements OnInit {
   articles: Article[] = [];
   query: string;
+
+  isError = false;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -32,10 +35,15 @@ export class CatNewsPage implements OnInit {
     loader.present();
 
     const x = this.service.getNewsByQuery(query, 1);
-    x.subscribe(data => {
-      this.articles = [];
-      this.articles = data["articles"];
-    });
+    x.subscribe(
+      data => {
+        this.articles = [];
+        this.articles = data["articles"];
+      },
+      error => {
+        this.service.errorFunction();
+      }
+    );
 
     setTimeout(() => {
       loader.dismiss();

@@ -4,7 +4,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding class="cards-bg">
+<ion-content padding class="cards-bg" *ngIf="!isError">
 
     <ion-card *ngFor="let article of articles">
         <div *ngIf="article.urlToImage !== null else noImage">
@@ -32,5 +32,4 @@
             </ion-col>
         </ion-row>
     </ion-card>
-
 </ion-content>

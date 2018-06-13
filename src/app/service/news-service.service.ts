@@ -1,3 +1,4 @@
+import { ToastController, NavController, App } from "ionic-angular";
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
 @Injectable()
@@ -7,8 +8,12 @@ export class NewsServiceService {
 
   HEADER = new HttpHeaders();
 
-  constructor(private http: HttpClient) {
-    this.HEADER = this.HEADER.append("Authorization", "Bearer " + this.API_KEY)
+  constructor(
+    private http: HttpClient,
+    public toastCtrl: ToastController,
+    private app: App
+  ) {
+    this.HEADER = this.HEADER.append("Authorization", "Bearer " + this.API_KEY);
   }
 
   get20TrendingNewsByCountry(country: string) {
@@ -31,5 +36,17 @@ export class NewsServiceService {
       params: params,
       headers: this.HEADER
     });
+  }
+
+  errorFunction() {
+    let toast = this.toastCtrl.create({
+      message: "Sorry, Something went wrong, please try again later !!!",
+      duration: 2000,
+      position: "bottom"
+    });
+
+    toast.present(toast);
+
+    this.app.getActiveNav().pop();
   }
 }
