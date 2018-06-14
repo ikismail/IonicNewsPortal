@@ -1,10 +1,12 @@
-import { ToastController, NavController, App } from "ionic-angular";
+import { NEWS_API_KEY } from "./../../assets/environment";
+import { ToastController, App } from "ionic-angular";
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
 @Injectable()
 export class NewsServiceService {
-  private API_KEY = "10ad575c68f24879949f89147d38c9ce";
+  private API_KEY = NEWS_API_KEY;
   private HEADLINE_API = "https://newsapi.org/v2/top-headlines";
+  private EVERYTHING_API = "https://newsapi.org/v2/everything";
 
   HEADER = new HttpHeaders();
 
@@ -25,14 +27,24 @@ export class NewsServiceService {
     });
   }
 
-  getNewsByQuery(query: string, page: any) {
+  getNewsByCategory(category: string, page: any) {
     let params = new HttpParams();
     params = params
       .set("page", page)
       .set("country", "in")
-      .set("category", query);
+      .set("category", category);
     console.log("params", params);
     return this.http.get(this.HEADLINE_API, {
+      params: params,
+      headers: this.HEADER
+    });
+  }
+
+  getNewsByQuery(query: string, page: any) {
+    let params = new HttpParams();
+    params = params.set("page", page).set("q", query);
+    console.log("params", params);
+    return this.http.get(this.EVERYTHING_API, {
       params: params,
       headers: this.HEADER
     });

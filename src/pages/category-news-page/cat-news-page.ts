@@ -27,14 +27,14 @@ export class CatNewsPage implements OnInit {
 
   ngOnInit(): void {}
 
-  getNewsBasedOnQuery(query: string) {
+  getNewsBasedOnQuery(category: string) {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
       duration: 2000
     });
     loader.present();
 
-    const x = this.service.getNewsByQuery(query, 1);
+    const x = this.service.getNewsByCategory(category, 1);
     x.subscribe(
       data => {
         this.articles = [];

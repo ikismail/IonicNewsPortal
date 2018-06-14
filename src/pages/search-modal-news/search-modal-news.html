@@ -1,0 +1,29 @@
+<ion-content>
+    <ion-searchbar #search (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-card *ngFor="let article of articles">
+        <div *ngIf="article.urlToImage !== null else noImage">
+            <img [src]="article.urlToImage" [alt]="article.url" />
+        </div>
+        <ng-template #noImage>
+            <img src="https://newprojects.99acres.com/projects/divya_infrastructure/divya_baleshwar_heights/images/photo_not_available.gif"
+                alt="No Image to Show" />
+        </ng-template>
+
+        <ion-card-content>
+            <ion-card-title>
+                <h3 style="  font-size: 16px;
+                    font-weight: 500;
+                    color: darkred;">{{article.title}}</h3>
+            </ion-card-title>
+            {{article.description}}
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col text-right>
+                <button ion-button clear small color="primary" icon-start>
+                    <ion-icon name='share-alt'></ion-icon>
+                    Share
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>
