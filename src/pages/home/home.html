@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="card-background-page">
+<ion-content class="card-background-page">
 
   <ion-card *ngFor="let source of initialList; let i=index" (click)="itemTapped(source, i)">
     <img [src]="source.imgSrc" />
