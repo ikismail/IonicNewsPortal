@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Countries
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col *ngFor="let country of countries">
+                <ion-img width="80" height="80" [src]="country.flag"></ion-img>
+                <p style="margin: 0">{{country.name}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

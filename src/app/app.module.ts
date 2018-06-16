@@ -1,3 +1,4 @@
+import { CountryPage } from "./../pages/countries/countries";
 import { NgModule, ErrorHandler } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
@@ -27,7 +28,8 @@ import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
     SourcePage,
     CatNewsPage,
     CategoriesPage,
-    SearchNewsPage
+    SearchNewsPage,
+    CountryPage
   ],
   imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -39,7 +41,8 @@ import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
     CatNewsPage,
     SourcePage,
     CategoriesPage,
-    SearchNewsPage
+    SearchNewsPage,
+    CountryPage
   ],
   providers: [
     StatusBar,

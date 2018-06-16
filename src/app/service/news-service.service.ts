@@ -1,4 +1,4 @@
-import { NEWS_API_KEY } from "./../../assets/environment";
+import { NEWS_API_KEY } from "./../../assets/environmentDummy";
 import { ToastController, App } from "ionic-angular";
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
@@ -60,5 +60,15 @@ export class NewsServiceService {
     toast.present(toast);
 
     this.app.getActiveNav().pop();
+  }
+
+  developedBy() {
+    let toast = this.toastCtrl.create({
+      message: "Developed by Mohammed Ismail (ikismail)",
+      duration: 2000,
+      position: "bottom"
+    });
+
+    toast.present(toast);
   }
 }
