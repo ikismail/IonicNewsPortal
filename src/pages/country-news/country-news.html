@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>{{countryName}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+    <!-- Set up your HTML -->
+    <div class="owl-carousel owl-theme" style="margin-top: 15px; padding: 10px">
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('general')">
+            <img src="http://placehold.it/250x70/3f51b5/fff?text=World" alt="">
+        </div>
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('business')">
+            <img src="http://placehold.it/250x70/673ab7/fff?text=Business" alt="">
+        </div>
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('entertainment')">
+            <img src="http://placehold.it/250x70/db4437/fff?text=Entertain" alt="">
+        </div>
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('health')">
+            <img src="http://placehold.it/250x70/e91e63/fff?text=Health" alt="">
+        </div>
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('science')">
+            <img src="http://placehold.it/250x70/673ab7/fff?text=Science" alt="">
+        </div>
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('sports')">
+            <img src="http://placehold.it/250x70/009688/fff?text=Sports" alt="">
+        </div>
+        <div class="item" style="width: 150px" (click)="getNewsByCategory('technology')">
+            <img src="http://placehold.it/250x70/db4437/fff?text=Technology" alt="">
+        </div>
+    </div>
+
+    <h4 ion-text color="primary" style="margin-left: 10px">Top Headlines</h4>
+
+    <ion-card *ngFor="let article of articles">
+        <div *ngIf="article.urlToImage !== null else noImage">
+            <img [src]="article.urlToImage" [alt]="article.url" />
+        </div>
+        <ng-template #noImage>
+            <img src="https://newprojects.99acres.com/projects/divya_infrastructure/divya_baleshwar_heights/images/photo_not_available.gif"
+                alt="No Image to Show" />
+        </ng-template>
+
+        <ion-card-content>
+            <ion-card-title>
+                <h3 style="  font-size: 16px;
+                font-weight: 500;
+                color: darkred;">{{article.title}}</h3>
+            </ion-card-title>
+            {{article.description}}
+        </ion-card-content>
+        <ion-row no-padding>
+            <ion-col text-right>
+                <button ion-button clear small color="primary" icon-start>
+                    <ion-icon name='share-alt'></ion-icon>
+                    Share
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+</ion-content>
