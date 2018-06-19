@@ -40,6 +40,19 @@ export class NewsServiceService {
     });
   }
 
+  getNewsByCatCountCode(category: string, countryCode: string, page: any) {
+    let params = new HttpParams();
+    params = params
+      .set("page", page)
+      .set("country", countryCode)
+      .set("category", category);
+    console.log("params", params);
+    return this.http.get(this.HEADLINE_API, {
+      params: params,
+      headers: this.HEADER
+    });
+  }
+
   getNewsByQuery(query: string, page: any) {
     let params = new HttpParams();
     params = params.set("page", page).set("q", query);

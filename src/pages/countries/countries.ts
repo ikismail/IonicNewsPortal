@@ -1,9 +1,10 @@
+import { CountryNewsPage } from "./../country-news/country-news";
 import { NavController } from "ionic-angular";
 import { Component, OnInit } from "@angular/core";
 import { countries_list } from "../../app/service/countriesData";
 
 @Component({
-  selector: "pages-countries",
+  selector: "page-countries",
   templateUrl: "countries.html"
 })
 export class CountryPage implements OnInit {
@@ -14,4 +15,10 @@ export class CountryPage implements OnInit {
   }
 
   ngOnInit() {}
+
+  itemTapped(item) {
+    this.navCtrl.push(CountryNewsPage, {
+      country: item
+    });
+  }
 }

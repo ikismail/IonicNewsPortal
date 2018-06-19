@@ -16,6 +16,7 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { CatNewsPage } from "../pages/category-news-page/cat-news-page";
 import { CategoriesPage } from "./../pages/categories/categories";
+import { CountryNewsPage } from "./../pages/country-news/country-news";
 import { SourcePage } from "./../pages/source-page/source";
 import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
 
@@ -29,7 +30,8 @@ import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
     CatNewsPage,
     CategoriesPage,
     SearchNewsPage,
-    CountryPage
+    CountryPage,
+    CountryNewsPage
   ],
   imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -42,7 +44,8 @@ import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
     SourcePage,
     CategoriesPage,
     SearchNewsPage,
-    CountryPage
+    CountryPage,
+    CountryNewsPage
   ],
   providers: [
     StatusBar,
