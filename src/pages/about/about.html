@@ -1,11 +1,52 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       About
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div class="about-header">
+    <img src="assets/ionic-app.svg" alt="ionic logo">
+  </div>
+  <div padding class="about-info">
+    <h4>News Hub Ionic App</h4>
+    <p>
+      The Ionic News Application is News Portal Application featuring news form the newsapi. It is focused on Ionic applications
+      being built with Ionic 3. This includes Angular concepts, Webpack, sass and many other technologies used in Ionic 3.
+    </p>
 
+    <ion-grid>
+      <h6>Developed by</h6>
+      <ion-row style="font-size: 15px">
+        <ion-col col-12>
+          <ion-icon name="person"></ion-icon>
+          <span class="hightlight">Mohammed Ismail</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-icon name="globe"></ion-icon>
+          <a href="https://ikismail.github.io" target="_blank">
+            <span class="hightlight">ikismail.github.io</span>
+          </a>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-icon name="mail"></ion-icon>
+          <a href="mailto:ikismail7@gmail.com" target="_blank">
+            <span class="hightlight">ikismail7@gmail.com</span>
+          </a>
+        </ion-col>
+        <ion-col col-6>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          <a href="https://api.whatsapp.com/send?phone=918124794942">
+            <span class="hightlight">+91-8124794942</span>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
