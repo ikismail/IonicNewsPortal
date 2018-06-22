@@ -17,7 +17,6 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { CatNewsPage } from "../pages/category-news-page/cat-news-page";
 import { CategoriesPage } from "./../pages/categories/categories";
 import { CountryNewsPage } from "./../pages/country-news/country-news";
-import { SourcePage } from "./../pages/source-page/source";
 import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
 
 @NgModule({
@@ -26,7 +25,6 @@ import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
     AboutPage,
     HomePage,
     TabsPage,
-    SourcePage,
     CatNewsPage,
     CategoriesPage,
     SearchNewsPage,
@@ -41,7 +39,6 @@ import { SearchNewsPage } from "./../pages/search-modal-news/search-modal-news";
     HomePage,
     TabsPage,
     CatNewsPage,
-    SourcePage,
     CategoriesPage,
     SearchNewsPage,
     CountryPage,

@@ -1,33 +1,33 @@
 import { Country } from "./../models/model";
 export const topCountries: Country[] = [
   {
-    id: "us",
+    code: "us",
     imgSrc: "https://image.ibb.co/n34FUd/america.jpg",
-    country: "States Trends",
+    name: "States Trends",
     newsList: 20
   },
   {
-    id: "in",
+    code: "in",
     imgSrc: "https://image.ibb.co/hMR7aJ/india.jpg",
-    country: "Indian Trends",
+    name: "Indian Trends",
     newsList: 20
   },
   {
-    id: "jp",
+    code: "jp",
     imgSrc: "https://image.ibb.co/hbvdhy/japan.jpg",
-    country: "Japan Trends",
+    name: "Japan Trends",
     newsList: 20
   },
   {
-    id: "at",
+    code: "at",
     imgSrc: "https://image.ibb.co/jj0ppd/australia.jpg",
-    country: "Australia Trends",
+    name: "Australia Trends",
     newsList: 20
   },
   {
-    id: "ca",
+    code: "ca",
     imgSrc: "https://image.ibb.co/nriW2y/canada.jpg",
-    country: "Canada Trends",
+    name: "Canada Trends",
     newsList: 20
   }
 ];

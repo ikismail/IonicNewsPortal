@@ -1,6 +1,6 @@
+import { CountryNewsPage } from "./../country-news/country-news";
 import { SearchNewsPage } from "./../search-modal-news/search-modal-news";
 import { topCountries } from "./../../app/service/countriesData";
-import { SourcePage } from "./../source-page/source";
 import { Component, OnInit } from "@angular/core";
 import { NavController, ModalController } from "ionic-angular";
 
@@ -25,11 +25,9 @@ export class HomePage implements OnInit {
 
   ngOnInit(): void {}
 
-  itemTapped(item, index) {
-    this.navCtrl.push(SourcePage, {
-      countryCode: item.id,
-      country: item.country,
-      index: index
+  itemTapped(source) {
+    this.navCtrl.push(CountryNewsPage, {
+      country: source
     });
   }
 }

@@ -10,7 +10,7 @@
 
   <ion-card *ngFor="let source of initialList; let i=index" (click)="itemTapped(source, i)">
     <img [src]="source.imgSrc" />
-    <div class="card-title">{{source.country}}</div>
+    <div class="card-title">{{source.name}}</div>
     <div class="card-subtitle">{{source.newsList}} Hot News</div>
   </ion-card>
 

@@ -24,8 +24,8 @@ export class NewsSource {
 }
 
 export class Country {
-  id: string;
+  code: string;
   imgSrc: string;
-  country: string;
+  name: string;
   newsList: number;
 }
