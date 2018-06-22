@@ -1,0 +1,4 @@
+#Wed Jun 27 13:30:36 IST 2018
+base.0=E\:\\Ismail\\Personal\\newsApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=E\:\\Ismail\\Personal\\newsApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
